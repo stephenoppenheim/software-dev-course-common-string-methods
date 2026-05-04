@@ -65,27 +65,78 @@ Complete the following tasks and assign the results to the specified variables. 
 
 */
 
+// Practice Problem #1
+console.log("\nPractice Problem #1\n");
+
+// Activity 1
+let activityOneString = "Learning JavaScript is fun!";
+let hasJS = activityOneString.includes("JavaScript");
+let funPosition = activityOneString.indexOf("fun");
+console.log("** Activity 1 **\n");
+console.log(activityOneString) // "Learning JavaScript is fun!"
+console.log(hasJS) // true
+console.log(funPosition) // 23
+
+// Activity 2
+let activityTwoString = " CODE BOOTCAMP ";
+let trimmedLowercaseString = activityTwoString.trim().toLowerCase();
+let modifiedString = trimmedLowercaseString.replace("BOOTCAMP", "JavaScript"); // no change due to case sensitivity
+console.log("\n** Activity 2 **\n");
+console.log(trimmedLowercaseString); // "code bootcamp"
+console.log(activityTwoString); // " CODE BOOTCAMP "
+console.log(modifiedString); // "code bootcamp"
+
+// Activity 3
+let activityThreeString = "Coding is fun and educational";
+let wordArray = activityThreeString.split(" ");
+console.log("\n** Activity 3 **\n");
+console.log(wordArray); // ["Coding", "is", "fun", "and", "educational"]
+
+// Activity 4
+let activityFourString = "Bootcamp";
+let firstChar = activityFourString.charAt(0);
+let extractedCamp = activityFourString.slice(4);
+console.log("\n** Activity 4 **\n");
+console.log(firstChar); // "B"
+console.log(extractedCamp); // "camp"
+
+// Advanced Challenge
+const advancedString = `Customer: John Doe
+Order: Apple, Banana, Grape
+Total: $20.50`;
+const [customerLine, orderLine, totalLine] = advancedString.split("\n");
+const customerName = customerLine.split(": ")[1];
+const orderItems = orderLine.split(": ")[1].split(", ");
+const totalPriceUpperCase = totalLine.toUpperCase();
+console.log("\n** Advanced Challenge **\n");
+console.log(customerName); // "John Doe"
+console.log(orderItems); // ["Apple", "Banana", "Grape"]
+console.log(totalPriceUpperCase); // "TOTAL: $20.50"
+
+// Practice Problem #2
+console.log("\nPractice Problem #2\n");
+
 //Starter Code
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
 // 1. Searching
-let hasJavaScript; // Your code here
-let codingPosition; // Your code here
-let startsWithWelcome; // Your code here
-let endsWithToday; // Your code here
+let hasJavaScript = inputString.includes("JavaScript"); // true
+let codingPosition = inputString.indexOf("Coding"); // 17
+let startsWithWelcome = inputString.startsWith("Welcome"); // false
+let endsWithToday = inputString.endsWith("today"); // false
 
 // 2. Transforming
-let lowercaseString; // Your code here
-let uppercaseString; // Your code here
-let trimmedString; // Your code here
-let replacedString; // Your code here
+let lowercaseString = inputString.toLowerCase(); // "  welcome to the coding bootcamp! learn javascript today.  "
+let uppercaseString = inputString.toUpperCase(); // "  WELCOME TO THE CODING BOOTCAMP! LEARN JAVASCRIPT TODAY.  "
+let trimmedString = inputString.trim(); // "Welcome to the Coding Bootcamp! Learn JavaScript today."
+let replacedString = inputString.replace("JavaScript", "coding"); // "  Welcome to the Coding Bootcamp! Learn coding today.  "
 
 // 3. Breaking Apart
-let wordsArray; // Your code here
+let wordsArray = inputString.split(" "); // ["", "", "Welcome", "to", "the", "Coding", "Bootcamp!", "Learn", "JavaScript", "today.", "", ""]
 
 // 4. Retrieving
-let firstCharacter; // Your code here
-let extractedBootcamp; // Your code here
+let firstCharacter = trimmedString.charAt(0); // "W"
+let extractedBootcamp = inputString.slice(24, 32); // "Bootcamp"
 
 // Log all results
 console.log({
